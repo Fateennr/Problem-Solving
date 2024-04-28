@@ -27,8 +27,8 @@ void dfs(int v, int par= 0)
 
 int main()
 {
-    int n;
-    cin>>n;
+    int n = 1;
+    // cin>>n;
 
     while(n--)
     {
@@ -47,12 +47,13 @@ int main()
 
         dfs(1);
 
-        for(int i=1;i<=m;i++)
-        {
-            cout<<depth[i]<<" ";
-            // cout<<height[i]<<endl;
-        }
-        cout<<"\n";
+        // for(int i=1;i<=m;i++)
+        // {
+        //     cout<<depth[i]<<" ";
+        //     // cout<<height[i]<<endl;
+        // }
+        // cout<<"\n";
+
         int max_depth = -1;
         int max_node = -1;
 
@@ -67,7 +68,7 @@ int main()
             depth[i] = 0;
         }
 
-        cout<<max_depth<<" "<<max_node<<endl;
+        // cout<<max_depth<<" "<<max_node<<endl;
 
         //diameter
         dfs(max_node);
@@ -86,7 +87,9 @@ int main()
             depth[i] = 0;
         }
 
-        cout<<"diameter "<<max_depth<<" "<<max_node<<endl;
+        // cout<<"diameter "<<max_depth<<" "<<max_node<<endl;
+
+        cout<<max_depth<<"\n";
     }
     return 0;
 }
